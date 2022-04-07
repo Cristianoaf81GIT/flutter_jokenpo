@@ -29,7 +29,18 @@ class _JogoState extends State<Jogo> {
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           ),
-          Image.asset("imagens/padrao.png"),
+          GestureDetector(
+            onTap: () {
+              print("um clique na imagem");
+            },
+            onDoubleTap: () {
+              print("Dois cliques na imagem");
+            },
+            onLongPress: () {
+              print("Clique longo na imagem");
+            },
+            child: Image.asset("imagens/padrao.png"),
+          ),
           Padding(
             padding: EdgeInsets.only(top: 32, bottom: 16),
             child: Text("Escolha um opção abaixo",
